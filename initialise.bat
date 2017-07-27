@@ -1,5 +1,6 @@
 echo off
 set comport=%1
+SerialSend.exe /baudrate 57600 /devnum %comport% /hex "r04\r\n"
 SerialSend.exe /baudrate 57600 /devnum %comport% /hex "c041\r\n"
 SerialSend.exe /baudrate 57600 /devnum %comport% /hex "c051\r\n"
 SerialSend.exe /baudrate 57600 /devnum %comport% /hex "c101\r\n"
